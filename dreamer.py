@@ -12,7 +12,7 @@ os.environ['MUJOCO_GL'] = 'egl'
 
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.mixed_precision import experimental as prec
+import tensorflow.keras.mixed_precision as prec
 
 tf.get_logger().setLevel('ERROR')
 
@@ -152,7 +152,7 @@ class Dreamer(tools.Module):
 
   @tf.function()
   def train(self, data, log_images=False):
-    self._strategy.experimental_run_v2(self._train, args=(data, log_images))
+    self._strategy.run(self._train, args=(data, log_images))
 
   def _train(self, data, log_images):
     with tf.GradientTape() as model_tape:

@@ -10,7 +10,7 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.compat.v1 as tf1
 import tensorflow_probability as tfp
-from tensorflow.keras.mixed_precision import experimental as prec
+import tensorflow.keras.mixed_precision as prec
 from tensorflow_probability import distributions as tfd
 
 
@@ -101,7 +101,7 @@ def simulate(agent, envs, steps=0, episodes=0, state=None):
   # Initialize or unpack simulation state.
   if state is None:
     step, episode = 0, 0
-    done = np.ones(len(envs), np.bool)
+    done = np.ones(len(envs), dtype=bool)
     length = np.zeros(len(envs), np.int32)
     obs = [None] * len(envs)
     agent_state = None
@@ -347,7 +347,7 @@ class Adam(tf.Module):
     self._wd = wd
     self._wdpattern = wdpattern
     self._opt = tf.optimizers.Adam(lr)
-    self._opt = prec.LossScaleOptimizer(self._opt, 'dynamic')
+    self._opt = prec.LossScaleOptimizer(self._opt, dynamic=True)
     self._variables = None
 
   @property
