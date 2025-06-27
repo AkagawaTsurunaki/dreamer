@@ -4,6 +4,7 @@ import sys
 import threading
 import traceback
 
+import dm_control
 import gym
 import numpy as np
 from PIL import Image
@@ -236,9 +237,13 @@ class ActionRepeat:
     total_reward = 0
     current_step = 0
     while current_step < self._amount and not done:
-      obs, reward, done, info = self._env.step(action)
-      total_reward += reward
-      current_step += 1
+      try:
+        obs, reward, done, info = self._env.step(action)
+        total_reward += reward
+        current_step += 1
+      except dm_control.rl.control.PhysicsError as e:
+        print(e)
+        break
     return obs, total_reward, done, info
 
 
