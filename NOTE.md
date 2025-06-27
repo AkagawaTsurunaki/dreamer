@@ -1,6 +1,8 @@
 # Note
 
-Tested by AkagawaTsurunaki.
+Forked and tested by [AkagawaTsurunaki](https://github.com/AkagawaTsurunaki/dreamer).
+
+Tensorflow 2.14 and newer dependencies are supported by this version of Dreamer.
 
 ## New Version
 
@@ -10,8 +12,7 @@ Tested by AkagawaTsurunaki.
 - Memory: 184 GiB (avg 7.7% used)
 - Python: 3.10
 
-Suppose you have Anaconda installed. 
-Then you can use `enviroment.yml` to setup your Anaconda environment.
+Suppose you have Anaconda installed. Then you can use `environment.yml` to setup your Anaconda environment.
 
 ```
 conda env update --name dreamer --file environment.yml
