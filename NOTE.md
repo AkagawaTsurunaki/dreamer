@@ -6,8 +6,8 @@ Tested by AkagawaTsurunaki.
 
 ### Environment:
 - OS: Ubuntu 24.10
-- GPU: NVIDIA GeForce RTX 4090 * 2 (avg 75% used per card)
-- Memory: 184 GiB (avg 6.3% used)
+- GPU: NVIDIA GeForce RTX 4090 * 2 (avg 75% memory used per card for `float32`)
+- Memory: 184 GiB (avg 7.7% used)
 - Python: 3.10
 
 Suppose you have Anaconda installed. 
@@ -29,8 +29,9 @@ python test_gpu_available.py
 > [!CAUTION]
 >
 > The old version of Dreamer may cause `Segmentation fault` or even crash your OS!
+> And it may product `NAN` value to break your training process.
 
-If you want to reproduce Dreamer based on the old version of this repo, please checkout the `old` branch.
+If you want to reproduce Dreamer based on the old version of Dreamer, please see the [commit](https://github.com/danijar/dreamer/commit/56d4d444dfd0582b0e79dab80aebbea74c0ce40d).
 
 To setup the enviroment, run the following commands:
 
