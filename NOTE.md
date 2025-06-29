@@ -4,7 +4,7 @@ Forked and tested by [AkagawaTsurunaki](https://github.com/AkagawaTsurunaki/drea
 
 Tensorflow 2.14 and newer dependencies are supported by this version of Dreamer.
 
-## New Version
+## Start-up
 
 ### Environment:
 - OS: Ubuntu 24.10
@@ -24,6 +24,12 @@ Activate your environment and check if your GPU devices are available.
 conda activate dreamer
 python test_gpu_available.py
 ```
+
+## Reproduction Result
+
+### DeepMind Control - Walker Walk Task
+
+![img](results/dmc_walker_walk/dmc_walker_walk_training_result.png)
 
 ## Old version
 
