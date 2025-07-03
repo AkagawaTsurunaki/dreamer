@@ -6,6 +6,10 @@ Tensorflow 2.14 and newer dependencies are supported by this version of Dreamer.
 
 ## Start-up
 
+> [!CAUTION]
+> 
+> There is a memory leak, please be careful to monitor your memory usage.
+
 ### Environment:
 - OS: Ubuntu 24.10
 - GPU: NVIDIA GeForce RTX 4090 * 2 (avg 75% memory used per card for `float32`)
