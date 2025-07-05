@@ -35,6 +35,10 @@ python test_gpu_available.py
 
 ![img](results/dmc_walker_walk/dmc_walker_walk_training_result.png)
 
+### DeepMind Control - Cartpole Swingup Task
+
+![img](results/dmc_cartpole_swingup/dmc_cartpole_swingup_training_result.png)
+
 ## Old version
 
 > [!CAUTION]
